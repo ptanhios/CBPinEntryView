@@ -138,6 +138,7 @@ public protocol CBPinEntryViewDelegate {
             button.backgroundColor = entryBackgroundColour
             button.setTitleColor(entryTextColour, for: .normal)
             button.titleLabel?.font = entryFont
+            button.setTitle("-", for: .normal)
 
             button.layer.cornerRadius = entryCornerRadius
             button.layer.borderColor = entryDefaultBorderColour.cgColor
@@ -251,7 +252,7 @@ extension CBPinEntryView: UITextFieldDelegate {
                 if button.tag == oldLength {
                     button.layer.borderColor = entryBorderColour.cgColor
                     UIView.setAnimationsEnabled(false)
-                    button.setTitle("", for: .normal)
+                    button.setTitle("-", for: .normal)
                     UIView.setAnimationsEnabled(true)
                 } else {
                     button.layer.borderColor = entryDefaultBorderColour.cgColor
