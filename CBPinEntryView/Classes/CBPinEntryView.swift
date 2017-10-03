@@ -97,7 +97,7 @@ public protocol CBPinEntryViewDelegate {
         super.awakeFromNib()
 
         commonInit()
-        textField.becomeFirstResponder()
+        didPressCodeButton(UIButton())
     }
 
     override open func prepareForInterfaceBuilder() {
