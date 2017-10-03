@@ -97,6 +97,7 @@ public protocol CBPinEntryViewDelegate {
         super.awakeFromNib()
 
         commonInit()
+        textField.becomeFirstResponder()
     }
 
     override open func prepareForInterfaceBuilder() {
